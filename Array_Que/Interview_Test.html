@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview_Test</title>
+
+    <script>
+
+        // write a function that will always sort data by key, it will take 2 params([] and key)
+        const people = [
+            { name: 'A', age: 12 },
+            { name: 'K', age: 34 },
+            { name: 'B', age: 12 },
+            { name: 'J', age: 24 },
+            { name: 'A', age: 34 },
+            { name: 'Z', age: 18 },
+            { name: 'E', age: 56 }
+        ];
+
+        /*  const data = [
+             { name: "O", age: 25 },
+             { name: "D", age: 30 },
+             { name: "A", age: 20 }
+         ]; */
+
+        function sortByKey(array, key) {
+            return array.sort((a, b, c) => {
+                const valueA = a[key];
+                const valueB = b[key];
+
+                if (valueA < valueB) {
+                    return -1;
+                }
+                if (valueA > valueB) {
+                    return 1;
+                }
+
+                return 0;
+            });
+        }
+
+        const sortedData = sortByKey(people, "name");
+        console.log(sortedData);
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Interview_Test Question</h1>
+</body>
+
+</html>

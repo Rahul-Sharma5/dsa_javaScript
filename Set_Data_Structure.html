@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set_Data_Structure</title>
+
+    <script>
+        let data = new Set(["anil", "peter", "anil"]);
+        let items = ["anil", "peter", "anil"];
+
+        //console.log(data);
+        //console.log(items);
+
+
+        data.add({ "email": "test@test.com" })
+        console.warn(data.has("peter1"))
+
+        
+        data.delete('anil');
+        console.warn(data);
+        for (x of data) {
+            console.warn(x)
+        }
+
+        data.forEach((val) => {
+            console.warn(val)
+        })
+        console.warn(data.entries())
+
+    </script>
+</head>
+
+<body>
+    <h1>Set DSA with JavaScript</h1>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial_Number</title>
+    <script>
+        // Factorial 5
+
+        function factorial(item) {
+            console.log("item", item)
+            if (item == 0) {
+                return 1
+            }
+            return item * factorial(item - 1);
+
+        }
+        let data1 = 5;
+        console.log(factorial(data1));
+        // console.log(5*factorial(5-1)*factorial(4-1)*factorial(3-1)*factorial(2-1)*factorial(1-1)
+    </script>
+</head>
+
+<body>
+    <h1>Factorial Program</h1>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Element</title>
+    <script>
+        let data = [12, 36, 25, 45, 65, 85];
+        document.write(data);
+        let item = 45;
+        let index = undefined;
+
+        for (let i = 0; i <= data.length; i++) {
+            if (data[i] === item) {
+                index = i;
+                break;
+            }
+        }
+        //console.log(index);
+        console.log(data.indexOf(item));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

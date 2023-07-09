@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack_Push_Pop</title>
+    <script>
+        let data = [];
+        let currentsSize = data.length;
+        let max = 5;
+        //console.log(data);
+
+        //! Push Function to add element in a array
+        function push(newVal) {
+            if (currentsSize >= max) {
+                alert("Stack is Full")
+            }
+            data[currentsSize] = newVal;
+            currentsSize += 1;
+        }
+
+        //! Pop Function to delete element in a array
+
+        function pop() {
+            if (currentsSize > 0) {
+                currentsSize -= 1;
+                data.length = currentsSize;
+
+            }
+            else {
+                alert("Already Empty")
+            }
+        }
+
+
+
+
+        push(20);
+        push(40);
+        push(30);
+        push(22);
+        push(25);
+
+        pop();
+        pop();
+        pop();
+
+        console.log(data)
+
+    </script>
+</head>
+
+<body>
+    <h1>Stack_Push_Pop (LIFO Operation)</h1>
+</body>
+
+</html>

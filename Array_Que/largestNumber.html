@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>largestNumber</title>
+
+    <script>
+
+        var array = [10, 5, 2, 7, 1];
+        
+        function findLargestNumber(array) {
+            var largestNumber = array[0];
+            for (var i = 1; i < array.length; i++) {
+                if (array[i] > largestNumber) {
+                    largestNumber = array[i];
+                }
+            }
+
+            return largestNumber;
+        }
+
+
+        var largestNumber = findLargestNumber(array);
+        console.log(largestNumber);
+
+    </script>
+</head>
+
+<body>
+    <h1>largest Number</h1>
+</body>
+
+</html>

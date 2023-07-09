@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array traversing</title>
+    <!-- <script>
+    var ary = [2, 3, 8, 9, 14, 22, 32];
+    for (i = 0; i < ary.length; i++) {
+        document.write(`Array ${i} is ${ary[i]} <br>`)
+    }
+</script> -->
+
+    <script>
+        var ary = [2, 3, 8, 9, 14, 22, 32];
+
+        function getElement() {
+            let index = document.getElementById('element').value
+            if (index < ary.length && typeof parseInt(index) === "number" && index >= 0) {
+                alert(`Array of Index is ${ary[index]}`);
+            } else {
+                alert("Please enter valid input");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="element" />
+    <button onclick="getElement()"> Get Element</button>
+
+</body>
+
+</html>

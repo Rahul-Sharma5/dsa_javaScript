@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+
+    <script>
+        let data = [5, 9, 13, 17, 25, 35, 45, 85, 100];
+        let find = 25;
+        let start = 0;
+        let end = data.length - 1;
+        let position = undefined;
+
+        while (start <= end) {
+            let middle = Math.floor((start + end) / 2);
+            //console.log(data[middle]);
+            //console.log(middle)
+
+            if (data[middle] === find) {
+                position = middle;
+                break;
+            }
+            else if (data[middle] < find) {
+                start = middle + 1;
+            }
+            else {
+                end = middle - 1;
+            }
+        }
+
+        console.log(position);
+    </script>
+</head>
+
+<body>
+    <h1>Binary Search with Iterative Approach</h1>
+    <p>Binary Search always work on shorted array (Default)</p>
+</body>
+
+</html>

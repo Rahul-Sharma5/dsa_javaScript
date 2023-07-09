@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call_Back_2</title>
+
+    <script>
+
+        function sayHello() {
+            console.log("Hello")
+        }
+
+        function add(num1, num2, callback) {
+            console.log(num1 + num2);
+            callback();
+        }
+
+        /* let a = 10;
+        let b = 20;
+        add(a, b, sayHello); */
+        add(10, 20, sayHello);
+    </script>
+</head>
+
+<body>
+    <h1>Callback function Method-2</h1>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search</title>
+
+    <script>
+        
+        /*         let data = [20, 40, 60, 5, 10, 70, 80, 99];
+                let item = 99;
+                let index = undefined;
+        
+                for (i = 0; i <= data.length - 1; i++) {
+                    //console.warn(data[i])
+                    if (data[i] === item) {
+                        index = i;
+                        break;
+                    }
+                }
+                console.warn(index); */
+
+        //! Linear Search with function
+
+        function findElement() {
+            let data = [9, 8, 7, 6, 4, 5, 2];
+
+            let find = document.getElementById("find_El").value;
+            let position = undefined;
+
+
+            for (let i = 0; i < data.length - 1; i++) {
+                if (data[i] === parseInt(find)) {
+                    position = i;
+                    break;
+                }
+            }
+
+            console.log(position);
+
+            /*  if (!position) {
+                 alert("Element don't exits")
+             }
+             else {
+                 alert("Element Positon is" + position)
+             } */
+        }
+
+        //console.log(position);
+
+    </script>
+</head>
+
+<body>
+    <h1>Linear Searching Algorithm</h1>
+    <input type="text" id="find_El" placeholder="Enter Find Number">
+    <button onclick="findElement()">Find Number</button>
+</body>
+
+</html>

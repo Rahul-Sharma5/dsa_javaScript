@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descending Sorting</title>
+
+    <script>
+
+        // Method 1
+
+        let items = [20, 12, 53, 3];
+
+        /*         function SelectionSort(data) {
+                    //console.log(data);
+                    let minID;
+                    for (let i = data.length-1; i >=0 ; i--) {
+                        minID = i;
+        
+                        for (let j = i - 1; j >=0; j--) {
+                            if (data[j] < data[minID]) {
+                                minID = j;
+                            }
+                        }
+        
+                        let Temp = data[minID];
+                        data[minID] = data[i];
+                        data[i] = Temp;
+                    }
+                }
+                SelectionSort(items)
+                console.log(items); */
+
+
+
+        // Method 2
+
+
+        function SelectionSort(data) {
+            //console.log(data);
+            let minID;
+            for (let i = 0; i < data.length; i++) {
+                minID = i;
+
+                for (let j = i + 1; j < data.length; j++) {
+                    if (data[j] > data[minID]) {
+                        minID = j;
+                    }
+                }
+
+                let Temp = data[minID];
+                data[minID] = data[i];
+                data[i] = Temp;
+            }
+        }
+        SelectionSort(items)
+        console.log(items);
+
+
+        /*         code: Selection Sort descending order
+        let arr = [6, 2, 4, 8, 10];
+        let n = arr.length;
+        
+        for (let i = n - 1; i >= 0; i--) {
+          for (let j = i - 1; j >= 0; j--) {
+            if (arr[j] < arr[i]) {
+                let temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
+          }
+        }
+        
+        console.warn(arr); */
+    </script>
+</head>
+
+<body>
+    <h1>Selection Descending Order Sort with JavaScript</h1>
+</body>
+
+</html>

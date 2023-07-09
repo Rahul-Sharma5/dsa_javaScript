@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack_Push_Pop</title>
+    <script>
+        let data = [];
+        let currentsSize = data.length;
+        let max = 5;
+        //console.log(data);
+
+        //! Push Function to add element in a array
+        function push() {
+            let newVal = document.getElementById('addEl').value
+            //newEl = parseInt(addEl)
+            if (currentsSize >= max) {
+                alert("Stack is Full")
+            }
+            else {
+                data[currentsSize] = newVal;
+                currentsSize += 1;
+                document.getElementById('addEl').value = "";
+                console.log("Element Added");
+            }
+
+        }
+
+        //! Pop Function to delete element in a array
+
+        function pop() {
+            if (currentsSize > 0) {
+                currentsSize -= 1;
+                data.length = currentsSize;
+
+            }
+            else {
+                alert("Already Empty")
+            }
+        }
+
+        function display() {
+            for (let i = 0; i <= currentsSize - 1; i++) {
+                console.log("Element No: ", i, "and Value is", data[i]);
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Stack_Push_Pop with Button</h1>
+    <input type="text" id="addEl" placeholder="Enter Stack Element">
+    <br>
+    <button onclick="push()">Add Element To Stack</button>
+
+    <button onclick="pop()">Remove Element To Stack</button>
+
+    <button onclick="display()">Display All Element of Stack</button>
+</body>
+
+</html>

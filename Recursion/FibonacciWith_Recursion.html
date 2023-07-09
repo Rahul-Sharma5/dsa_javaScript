@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+
+    <script>
+        const arr = [0, 1];
+        let index = 5;
+        let counter = 2;
+
+        function Fibo(num1, num2)
+        {
+            if(counter === index){
+                return;
+            }
+
+            arr.push(num1+num2);
+            counter++
+            Fibo(num2, num1+num2);
+        }
+        Fibo(arr[0], arr[1]);
+        console.log(arr);
+
+    </script>
+</head>
+<body>
+    <h1>Fibonacci Series with Recursion in JavaScript</h1>
+</body>
+</html>

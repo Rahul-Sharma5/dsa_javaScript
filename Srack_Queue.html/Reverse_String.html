@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+    <script>
+        let data = [];
+        let currentsSize = data.length;
+
+
+
+        //! Push Methods 
+        function push(newVal) {
+            data[currentsSize] = newVal;
+            currentsSize += 1;
+        }
+
+
+         //! Pop Methods 
+        function pop() {
+            lastRemoveItem=data[currentsSize-1];
+            currentsSize -= 1;
+            data.length = currentsSize;
+            return lastRemoveItem;
+        }
+
+         //! Reverse String in Arrays
+        function reverseString(strItem){
+            //console.log(strItem)
+            for(let i=0; i<strItem.length; i++){
+                push(strItem[i]);
+            }
+
+            for(let i=0; i<strItem.length; i++){
+                //console.log(pop());
+                strItem[i]=pop();
+            }
+
+        }
+
+        // Simple String
+        let str = "Rahul";
+        str= str.split("");
+        console.log(str)
+
+        // Reverse String in array
+        reverseString(str)
+        console.log(str)
+
+        // Reverse String in array to string
+        console.log(str.join(""));
+
+        push(20);
+        push(30);
+        push(40);
+        push(50);
+
+        pop();
+        pop();
+        console.log(data);
+    </script>
+</head>
+
+<body>
+    <h1>Reverse String with Stack</h1>
+</body>
+
+</html>

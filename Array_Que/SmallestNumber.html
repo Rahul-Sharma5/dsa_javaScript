@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smallest Number</title>
+    <script>
+
+        var array = [10, 5, 2, 7];
+
+        function SmallestNumber(array) {
+            var smallestNumber = array[0];
+
+            for (var i = 1; i < array.length; i++) {
+                if (array[i] < smallestNumber) {
+                    smallestNumber = array[i];
+                }
+            }
+
+            return smallestNumber;
+        }
+
+        var smallestNumber = SmallestNumber(array);
+        console.log(smallestNumber);
+
+    </script>
+</head>
+
+<body>
+    <h1>Smallest Number</h1>
+</body>
+
+</html>
