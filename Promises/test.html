@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-                let complete = true;
-        
-                let prom = new Promise(function (resolve, reject) {
+
+        function prom(complete) {
+            return new Promise(function (resolve, reject) {
+                console.log("Please wait fetching data");
+                setTimeout(() => {
                     if (complete) {
-                        resolve("i am succesful")
+                        resolve("i am successful")
                     }
                     else {
                         reject("i am failed")
                     }
-                })
-        
-                let onfulfilment = (result) => {
-                    console.log(result);
-                }
-        
-                let onRejection = (error) => {
-                    console.log(error)
-                }
-        
-                prom.then(onfulfilment).catch(onRejection);
+                }, 3000);
+
+            })
+        }
+
+        let onfulfilment = (result) => {
+            console.log(result)
+        }
+
+        let onRejection = (error) => {
+            console.log(error)
+        }
+
+        prom(true).then(onfulfilment).catch(onRejection);
 
     </script>
 </head>

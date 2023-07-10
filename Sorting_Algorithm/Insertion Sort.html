@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort</title>
+
+    <script>
+        function insertionSort(arr) {
+            const len = arr.length;
+
+            for (let i = 1; i < len; i++) {
+                let current = arr[i];
+                let j = i - 1;
+
+                // Shift elements greater than the current element to the right
+                while (j >= 0 && arr[j] > current) {
+                    arr[j + 1] = arr[j];
+                    j--;
+                }
+
+                // Place the current element at its correct position
+                arr[j + 1] = current;
+            }
+
+            return arr;
+        }
+
+        // Example usage:
+        const array = [64, 34, 25, 12, 22, 11, 90];
+        console.log("Original Array:", array);
+        console.log("Sorted Array:", insertionSort(array));
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Insertion Sorting Algorithms</h1>
+</body>
+
+</html>

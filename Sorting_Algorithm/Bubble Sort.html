@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+
+    <script>
+        function bubbleSort(arr) {
+            const arrayLength = arr.length;
+
+            for (let i = 0; i < arrayLength - 1; i++) {
+                // Last i elements are already in place
+                for (let j = 0; j < arrayLength - i - 1; j++) {
+                    // Compare adjacent elements
+                    if (arr[j] > arr[j + 1]) {
+                        // Swap if the current element is greater than the next element
+                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                    }
+                }
+            }
+
+            return arr;
+        }
+
+        // Example usage:
+        const array = [64, 34, 25, 12, 22, 11, 90];
+        console.log("Original Array:", array);
+        console.log("Sorted Array:", bubbleSort(array));
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Bubble Sorting Algorithms</h1>
+</body>
+
+</html>
